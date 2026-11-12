@@ -16,3 +16,7 @@ ALTER TABLE owner MODIFY idOwner INT NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE pet ADD COLUMN idPet INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 ALTER TABLE pet ADD COLUMN idOwner INT;
+
+UPDATE pet
+JOIN owner ON pet.owner = owner.Name
+SET pet.idOwner = owner.idOwner;

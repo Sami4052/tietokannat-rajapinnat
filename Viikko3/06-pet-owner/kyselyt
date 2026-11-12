@@ -9,4 +9,7 @@ mysql> CREATE TABLE owner (
     -> PRIMARY KEY (idOwner)
     -> );
 
-SHOW TABLES;    
+SHOW TABLES;
+
+DESC owner;
+ALTER TABLE owner MODIFY idOwner INT NOT NULL AUTO_INCREMENT;

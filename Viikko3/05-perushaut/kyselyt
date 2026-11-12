@@ -12,3 +12,6 @@ SELECT AVG(salary) AS keskiarvo_palkka FROM salaries;
 
 e)Kaikki työntekijät joiden sukunimi on Facello.
 SELECT * FROM employees WHERE last_name = 'Facello';
+
+f)kuinka moni syntynyt 1950-luvulla
+SELECT COUNT(*) AS syntyneet_1950_luvulla FROM employees WHERE birth_date BETWEEN '1950-01-01' AND '1959-12-31';

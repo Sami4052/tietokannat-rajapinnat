@@ -237,3 +237,11 @@ mysql> SELECT * FROM employees WHERE last_name = 'Facello';
 | 488569 | 1955-11-15 | Satoru      | Facello   | M      | 1993-03-20 |
 | 493549 | 1960-04-17 | Achilleas   | Facello   | F      | 1991-11-27 |
 +--------+------------+-------------+-----------+--------+------------+
+
+f)
+mysql> SELECT COUNT(*) AS syntyneet_1950_luvulla FROM employees WHERE birth_date BETWEEN '1950-01-01' AND '1959-12-31';
++------------------------+
+| syntyneet_1950_luvulla |
++------------------------+
+|                 182886 |
++------------------------+

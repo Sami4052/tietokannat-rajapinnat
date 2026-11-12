@@ -1,0 +1,65 @@
+USE employees;
+
+ a) 10 ensimmäistä sukunimen mukaan
+
+SELECT * FROM employees
+ORDER BY last_name
+LIMIT 10;
+
+b) Sukunimen ja etunimen mukaan
+
+SELECT * FROM employees
+ORDER BY last_name, first_name
+LIMIT 10;
+
+c) 5 viimeksi palkattua
+SELECT * FROM employees
+ORDER BY hire_date DESC
+LIMIT 5;
+
+d) Suurin nykyinen palkka
+SELECT e.first_name, e.last_name, s.salary
+FROM employees e
+JOIN salaries s ON e.emp_no = s.emp_no
+WHERE s.to_date = '9999-01-01'
+ORDER BY s.salary DESC
+LIMIT 1;
+
+e) Pienin nykyinen palkka
+SELECT e.first_name, e.last_name, s.salary
+FROM employees e
+JOIN salaries s ON e.emp_no = s.emp_no
+WHERE s.to_date = '9999-01-01'
+ORDER BY s.salary ASC
+LIMIT 1;
+
+f) Yli 150000 ansaitsevat
+SELECT e.first_name, e.last_name, s.salary
+FROM employees e
+JOIN salaries s ON e.emp_no = s.emp_no
+WHERE s.to_date = '9999-01-01' AND s.salary > 150000;
+
+g) Työntekijät Salesissa ja Marketingissa (nykyiset)
+SELECT d.dept_name, COUNT(*) AS lkm
+FROM dept_emp de
+JOIN departments d ON de.dept_no = d.dept_no
+WHERE de.to_date = '9999-01-01'
+  AND d.dept_name IN ('Sales', 'Marketing')
+GROUP BY d.dept_name;
+
+h) Nykyiset osastonjohtajat
+SELECT e.first_name, e.last_name, d.dept_name
+FROM dept_manager dm
+JOIN employees e ON dm.emp_no = e.emp_no
+JOIN departments d ON dm.dept_no = d.dept_no
+WHERE dm.to_date = '9999-01-01';
+
+i) Keskipalkka Salesissa ja Marketingissa
+SELECT d.dept_name, AVG(s.salary) AS keskipalkka
+FROM salaries s
+JOIN dept_emp de ON s.emp_no = de.emp_no
+JOIN departments d ON de.dept_no = d.dept_no
+WHERE s.to_date = '9999-01-01'
+  AND de.to_date = '9999-01-01'
+  AND d.dept_name IN ('Sales', 'Marketing')
+GROUP BY d.dept_name;

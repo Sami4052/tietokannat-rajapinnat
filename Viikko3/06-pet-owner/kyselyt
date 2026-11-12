@@ -1,0 +1,12 @@
+USE test_1;
+
+CREATE TABLE owner (
+    -> idowner INT NOT NULL AUTO_INCREMENT,
+    -> ^CEATE TABLE owner (
+mysql> CREATE TABLE owner (
+    -> idOwner INT NOT NULL,
+    -> Name VARCHAR(45) NOT NULL,
+    -> PRIMARY KEY (idOwner)
+    -> );
+
+SHOW TABLES;    

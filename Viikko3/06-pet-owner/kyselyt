@@ -20,3 +20,9 @@ ALTER TABLE pet ADD COLUMN idOwner INT;
 UPDATE pet
 JOIN owner ON pet.owner = owner.Name
 SET pet.idOwner = owner.idOwner;
+
+ALTER TABLE pet MODIFY idOwner INT NOT NULL;
+
+ALTER TABLE pet
+ADD CONSTRAINT fk_pet_owner
+FOREIGN KEY (idOwner) REFERENCES owner(idOwner);

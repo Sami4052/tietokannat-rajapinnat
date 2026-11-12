@@ -26,3 +26,8 @@ ALTER TABLE pet MODIFY idOwner INT NOT NULL;
 ALTER TABLE pet
 ADD CONSTRAINT fk_pet_owner
 FOREIGN KEY (idOwner) REFERENCES owner(idOwner);
+
+ALTER TABLE pet DROP COLUMN owner;
+
+DESC owner;
+DESC pet;

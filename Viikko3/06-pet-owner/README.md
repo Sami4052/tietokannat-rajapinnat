@@ -29,3 +29,25 @@ SELECT * FROM pet;
 |     7 | Buffy    | Harold | dog     | f    | 1989-05-13 | NULL       |       1 |
 |     8 | Bowser   | Diane  | dog     | m    | 1979-08-31 | 1995-07-29 |       4 |
 +-------+----------+--------+---------+------+------------+------------+---------+
+
+
+DESC owner;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| idOwner | int         | NO   | PRI | NULL    | auto_increment |
+| Name    | varchar(45) | NO   |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+
+DESC pet;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| idPet   | int         | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(20) | YES  |     | NULL    |                |
+| species | varchar(20) | YES  |     | NULL    |                |
+| sex     | char(1)     | YES  |     | NULL    |                |
+| birth   | date        | YES  |     | NULL    |                |
+| death   | date        | YES  |     | NULL    |                |
+| idOwner | int         | NO   | MUL | NULL    |                |
++---------+-------------+------+-----+---------+----------------+

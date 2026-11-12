@@ -36,3 +36,11 @@ mysql> SELECT MAX(salary) AS suurin_palkka, MIN(salary) AS pienin_palkka FROM sa
 +---------------+---------------+
 |        158220 |         38623 |
 +---------------+---------------+
+
+d)
+mysql> SELECT AVG(salary) AS keskiarvo_palkka FROM salaries;
++------------------+
+| keskiarvo_palkka |
++------------------+
+|       63810.7448 |
++------------------+

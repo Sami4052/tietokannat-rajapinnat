@@ -6,3 +6,6 @@ SELECT DISTINCT title FROM titles;
 
 c)suurin ja pienin nykyinen palkka
 SELECT MAX(salary) AS suurin_palkka, MIN(salary) AS pienin_palkka FROM salaries;
+
+d)keskimääräinen palkka
+SELECT AVG(salary) AS keskiarvo_palkka FROM salaries;

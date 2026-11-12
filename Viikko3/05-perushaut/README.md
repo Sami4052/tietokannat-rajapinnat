@@ -245,3 +245,12 @@ mysql> SELECT COUNT(*) AS syntyneet_1950_luvulla FROM employees WHERE birth_date
 +------------------------+
 |                 182886 |
 +------------------------+
+
+g)
+mysql> SELECT gender, COUNT(*) AS maara FROM employees GROUP BY gender;
++--------+--------+
+| gender | maara  |
++--------+--------+
+| M      | 179973 |
+| F      | 120051 |
++--------+--------+

@@ -9,3 +9,6 @@ SELECT MAX(salary) AS suurin_palkka, MIN(salary) AS pienin_palkka FROM salaries;
 
 d)keskimääräinen palkka
 SELECT AVG(salary) AS keskiarvo_palkka FROM salaries;
+
+e)Kaikki työntekijät joiden sukunimi on Facello.
+SELECT * FROM employees WHERE last_name = 'Facello';

@@ -1,2 +1,5 @@
 USE employees;
 SELECT dept_name FROM departments;
+
+b)Nimikkeet kerran mitä title tietokannassa on
+SELECT DISTINCT title FROM titles;

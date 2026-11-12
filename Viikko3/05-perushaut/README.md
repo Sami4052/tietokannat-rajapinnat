@@ -14,3 +14,17 @@ mysql> SELECT dept_name FROM departments;
 | Research           |
 | Sales              |
 +--------------------+
+
+b)
+mysql> SELECT DISTINCT title FROM titles;
++--------------------+
+| title              |
++--------------------+
+| Senior Engineer    |
+| Staff              |
+| Engineer           |
+| Senior Staff       |
+| Assistant Engineer |
+| Technique Leader   |
+| Manager            |
++--------------------+

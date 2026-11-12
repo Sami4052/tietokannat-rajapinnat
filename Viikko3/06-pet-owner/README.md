@@ -1,3 +1,14 @@
+Tehtävä 6: pet ja owner, yhdestä moneen -yhteys
+
+Omistajan nimi toistui pet-taulussa jokaisella lemmikillä. Omistajat siirrettiin
+omaan owner-tauluunsa ja pet-tauluun lisättiin vierasavain idOwner.
+
+- owner (1) ----< pet (monta)
+- Vierasavain on "monta"-puolen taulussa (pet), kuten materiaalin Opiskelija–Arviointi-esimerkissä
+- Yhteys on ei-tunnisteinen: petillä on oma pääavain idPet, idOwner ei ole osa sitä
+- idOwner on NOT NULL, eli jokaisella lemmikillä on oltava omistaja
+
+
 SHOW TABLES;
 +------------------+
 | Tables_in_test_1 |

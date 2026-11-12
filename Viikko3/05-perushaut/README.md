@@ -28,3 +28,11 @@ mysql> SELECT DISTINCT title FROM titles;
 | Technique Leader   |
 | Manager            |
 +--------------------+
+
+c)
+mysql> SELECT MAX(salary) AS suurin_palkka, MIN(salary) AS pienin_palkka FROM salaries;
++---------------+---------------+
+| suurin_palkka | pienin_palkka |
++---------------+---------------+
+|        158220 |         38623 |
++---------------+---------------+

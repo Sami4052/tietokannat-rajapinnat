@@ -3,3 +3,6 @@ SELECT dept_name FROM departments;
 
 b)Nimikkeet kerran mitä title tietokannassa on
 SELECT DISTINCT title FROM titles;
+
+c)suurin ja pienin nykyinen palkka
+SELECT MAX(salary) AS suurin_palkka, MIN(salary) AS pienin_palkka FROM salaries;
